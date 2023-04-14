@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -49,6 +51,14 @@ public class Driver {
 	@JoinColumn(name = "vehicle_id", referencedColumnName = "id")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Vehicle vehicle;
+
+	@PrePersist
+	@PreUpdate
+	public void validate() {
+		if (vehicle == null) {
+			throw new IllegalStateException("Driver must have a vehicle");
+		}
+	}
 
 	public Driver() {
 	}

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,8 +28,12 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 
+//	Logger logger = LoggerFactory.getLogger(UserController.class);
+
 	@GetMapping("/users")
 	public List<User> getAllUsers() {
+//		logger.error("Fetched all users from DB using GET Request");
+//		logger.trace("Fetched all users from DB using GET Request");
 		return userRepository.findAll();
 	}
 

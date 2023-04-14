@@ -20,6 +20,7 @@ import com.springboot.uber.exception.ResourceNotFoundException;
 import com.springboot.uber.model.Vehicle;
 import com.springboot.uber.model.VehicleBooking;
 import com.springboot.uber.repository.VehicleRepository;
+import com.springboot.uber.service.VehicleService;
 
 @RestController
 @RequestMapping("/api/v1/")
@@ -28,6 +29,7 @@ public class VehicleController {
 
 	@Autowired
 	private VehicleRepository vehicleRepository;
+	private VehicleService vehicleService;
 
 //	OLAP Query 1
 	@GetMapping("/vehicles/bookings")
@@ -38,6 +40,12 @@ public class VehicleController {
 	@GetMapping("/vehicles")
 	public List<Vehicle> getAllVehicles() {
 		return vehicleRepository.findAll();
+	}
+
+	@GetMapping("/vehicles/unassigned")
+	public ResponseEntity<List<Vehicle>> getUnassignedVehicles() {
+		List<Vehicle> unassignedVehicles = vehicleService.getUnassignedVehicles();
+		return ResponseEntity.ok(unassignedVehicles);
 	}
 
 	@PostMapping("/vehicles")

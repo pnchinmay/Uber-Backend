@@ -24,4 +24,7 @@ public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
 	@Query(value = "SELECT v.id, v.company, v.model, COUNT(b.id) AS TotalBookings FROM vehicle v JOIN ride r ON v.id = r.vehicle_id JOIN booking b ON r.id = b.ride_id GROUP BY v.id, v.company, v.model ORDER BY TotalBookings DESC;", nativeQuery = true)
 	List<VehicleBooking> findAllWithBookings();
 
+	@Query("SELECT DISTINCT r.vehicle_id FROM ride r WHERE r.status = 1")
+	List<Integer> findActiveVehicleIds();
+
 }
