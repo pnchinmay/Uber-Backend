@@ -1,0 +1,1525 @@
+2023-04-01 03:09:19.201 [restartedMain] INFO  com.springboot.uber.UberApplication - Starting UberApplication using Java 17.0.5 on dell with PID 197421 (/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes started by manas in /hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber)
+2023-04-01 03:09:19.201 [restartedMain] DEBUG com.springboot.uber.UberApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-01 03:09:19.202 [restartedMain] INFO  com.springboot.uber.UberApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 03:09:19.500 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:293)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:74)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Incorrect column specifier for column 'id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 39 common frames omitted
+2023-04-01 03:09:19.675 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 03:09:19.801 [restartedMain] INFO  com.springboot.uber.UberApplication - Started UberApplication in 0.639 seconds (JVM running for 285.939)
+2023-04-01 03:11:14.508 [Thread-7] WARN  o.apache.tomcat.util.net.NioEndpoint - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2023-04-01 03:11:14.508 [http-nio-8080-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-01 03:11:14.594 [restartedMain] INFO  com.springboot.uber.UberApplication - Starting UberApplication using Java 17.0.5 on dell with PID 197421 (/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes started by manas in /hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber)
+2023-04-01 03:11:14.594 [restartedMain] DEBUG com.springboot.uber.UberApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-01 03:11:14.594 [restartedMain] INFO  com.springboot.uber.UberApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 03:11:14.842 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:293)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:74)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Incorrect column specifier for column 'id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 39 common frames omitted
+2023-04-01 03:11:15.021 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 03:11:15.138 [restartedMain] INFO  com.springboot.uber.UberApplication - Started UberApplication in 0.562 seconds (JVM running for 401.275)
+2023-04-01 03:11:18.538 [Thread-11] WARN  o.apache.tomcat.util.net.NioEndpoint - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2023-04-01 03:11:18.539 [http-nio-8080-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-01 03:11:18.622 [restartedMain] INFO  com.springboot.uber.UberApplication - Starting UberApplication using Java 17.0.5 on dell with PID 197421 (/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes started by manas in /hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber)
+2023-04-01 03:11:18.622 [restartedMain] DEBUG com.springboot.uber.UberApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-01 03:11:18.622 [restartedMain] INFO  com.springboot.uber.UberApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 03:11:18.847 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:293)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:74)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Incorrect column specifier for column 'id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 39 common frames omitted
+2023-04-01 03:11:19.002 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 03:11:19.102 [restartedMain] INFO  com.springboot.uber.UberApplication - Started UberApplication in 0.494 seconds (JVM running for 405.24)
+2023-04-01 03:13:35.882 [Thread-15] WARN  o.apache.tomcat.util.net.NioEndpoint - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2023-04-01 03:13:35.882 [http-nio-8080-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-01 03:13:35.936 [restartedMain] INFO  com.springboot.uber.UberApplication - Starting UberApplication using Java 17.0.5 on dell with PID 197421 (/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes started by manas in /hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber)
+2023-04-01 03:13:35.937 [restartedMain] DEBUG com.springboot.uber.UberApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-01 03:13:35.937 [restartedMain] INFO  com.springboot.uber.UberApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 03:13:36.154 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table vehicle_booking (id decimal(19,2) not null auto_increment, company varchar(255), model varchar(255), total_bookings bigint not null, primary key (id)) engine=InnoDB" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:293)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:74)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:910)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.sql.SQLSyntaxErrorException: Incorrect column specifier for column 'id'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 39 common frames omitted
+2023-04-01 03:13:36.315 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 03:13:36.438 [restartedMain] INFO  com.springboot.uber.UberApplication - Started UberApplication in 0.522 seconds (JVM running for 542.576)
+2023-04-01 03:13:45.207 [http-nio-8080-exec-1] ERROR c.s.uber.controller.UserController - Fetched all users from DB using GET Request
+2023-04-01 03:13:45.207 [http-nio-8080-exec-1] TRACE c.s.uber.controller.UserController - Fetched all users from DB using GET Request
+2023-04-01 03:14:49.040 [Thread-19] WARN  o.apache.tomcat.util.net.NioEndpoint - Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2023-04-01 03:14:49.040 [http-nio-8080-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:548)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:129)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-01 03:14:49.118 [restartedMain] TRACE o.s.b.env.EnvironmentPostProcessor - RandomValuePropertySource add to Environment
+2023-04-01 03:14:49.118 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentPostProcessor - Post-processing environment to add config data
+2023-04-01 03:14:49.118 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Building config data environment contributors
+2023-04-01 03:14:49.118 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'configurationProperties'
+2023-04-01 03:14:49.118 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'commandLineArgs'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletConfigInitParams'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletContextInitParams'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemProperties'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemEnvironment'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'random'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:file:./;optional:file:./config/;optional:file:./config/*/'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:classpath:/;optional:classpath:/config/'
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing initial config data environment contributors without activation context
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. no activation context
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading file [.] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-01 03:14:49.119 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [file [.]]
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading class path resource [application.properties] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [class path resource [application.properties]]
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating config data activation context from initial contributions
+2023-04-01 03:14:49.120 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with initial activation context
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. [ConfigDataActivationContext@941ac5 cloudPlatform = [null], profiles = [null]]
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 0 contributors
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Deducing profiles from current config data environment contributors
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with profile activation context
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase AFTER_PROFILE_ACTIVATION. [ConfigDataActivationContext@30dc2ce6 cloudPlatform = [null], profiles = [Profiles@69fd1244 active = '[]', default = '[default]', accepted = '[default]']]
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-01 03:14:49.122 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yaml
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yml
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.xml
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.properties
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yaml
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yml
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.xml
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.properties
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:14:49.123 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yaml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.xml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.properties
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yaml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.xml
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.properties
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource class path resource [application.properties] ignoring location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Applying config data environment contributions
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding imported property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting default profiles: [default]
+2023-04-01 03:14:49.124 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting active profiles: []
+2023-04-01 03:14:49.128 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.131 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.132 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.132 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.ValidationExceptionFailureAnalyzer: javax/validation/ValidationException
+2023-04-01 03:14:49.133 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.134 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer: liquibase/exception/ChangeLogParseException
+2023-04-01 03:14:49.136 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.136 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer: org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer
+2023-04-01 03:14:49.136 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.138 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.138 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:14:49.141 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.141 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.141 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.141 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.141 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:14:49.142 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.diagnostics.FailureAnalysisReporter] names: [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter]
+2023-04-01 03:14:49.143 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@25:76 - no applicable action for [color], current ElementPath  is [[configuration][root][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@26:14 - no applicable action for [pattern], current ElementPath  is [[configuration][root][color][pattern]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@25:76 - no applicable action for [color], current ElementPath  is [[configuration][root][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@26:14 - no applicable action for [pattern], current ElementPath  is [[configuration][root][color][pattern]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329)
+	... 23 common frames omitted
+2023-04-01 03:15:19.635 [Thread-19] DEBUG o.s.b.d.r.c.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2c18d4c
+2023-04-01 03:15:19.635 [Thread-19] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.springboot.uber.UberApplication with URLs [file:/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes/]
+2023-04-01 03:15:19.647 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.logging.LoggingSystemFactory] names: [org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.Factory, org.springframework.boot.logging.java.JavaLoggingSystem.Factory]
+2023-04-01 03:15:19.688 [restartedMain] TRACE o.s.b.env.EnvironmentPostProcessor - RandomValuePropertySource add to Environment
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentPostProcessor - Post-processing environment to add config data
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Building config data environment contributors
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'configurationProperties'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'commandLineArgs'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletConfigInitParams'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletContextInitParams'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemProperties'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemEnvironment'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'random'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:file:./;optional:file:./config/;optional:file:./config/*/'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:classpath:/;optional:classpath:/config/'
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing initial config data environment contributors without activation context
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. no activation context
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:19.689 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading file [.] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [file [.]]
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading class path resource [application.properties] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [class path resource [application.properties]]
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating config data activation context from initial contributions
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with initial activation context
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. [ConfigDataActivationContext@4749423 cloudPlatform = [null], profiles = [null]]
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 0 contributors
+2023-04-01 03:15:19.690 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Deducing profiles from current config data environment contributors
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with profile activation context
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase AFTER_PROFILE_ACTIVATION. [ConfigDataActivationContext@6b885256 cloudPlatform = [null], profiles = [Profiles@23089d5c active = '[]', default = '[default]', accepted = '[default]']]
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yaml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.xml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.properties
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yaml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.xml
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.properties
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-01 03:15:19.691 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yaml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.xml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.properties
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yaml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.xml
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.properties
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource class path resource [application.properties] ignoring location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Applying config data environment contributions
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding imported property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting default profiles: [default]
+2023-04-01 03:15:19.692 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting active profiles: []
+2023-04-01 03:15:19.693 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.693 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.694 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.694 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.ValidationExceptionFailureAnalyzer: javax/validation/ValidationException
+2023-04-01 03:15:19.694 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.694 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer: liquibase/exception/ChangeLogParseException
+2023-04-01 03:15:19.695 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.695 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer: org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer
+2023-04-01 03:15:19.695 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.695 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.695 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:19.696 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.696 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.696 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.696 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.696 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:19.697 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.diagnostics.FailureAnalysisReporter] names: [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter]
+2023-04-01 03:15:19.697 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@23:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@24:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@23:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@24:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329)
+	... 23 common frames omitted
+2023-04-01 03:15:48.332 [Thread-0] DEBUG o.s.b.d.r.c.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@37795e1f
+2023-04-01 03:15:48.340 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.logging.LoggingSystemFactory] names: [org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.Factory, org.springframework.boot.logging.java.JavaLoggingSystem.Factory]
+2023-04-01 03:15:48.498 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[main,5,main]
+2023-04-01 03:15:48.498 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2023-04-01 03:15:48.498 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.springboot.uber.UberApplication with URLs [file:/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes/]
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.env.EnvironmentPostProcessor - RandomValuePropertySource add to Environment
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentPostProcessor - Post-processing environment to add config data
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Building config data environment contributors
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'configurationProperties'
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'commandLineArgs'
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletConfigInitParams'
+2023-04-01 03:15:48.498 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletContextInitParams'
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemProperties'
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemEnvironment'
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'random'
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:file:./;optional:file:./config/;optional:file:./config/*/'
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:classpath:/;optional:classpath:/config/'
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing initial config data environment contributors without activation context
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. no activation context
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading file [.] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-01 03:15:48.499 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [file [.]]
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading class path resource [application.properties] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [class path resource [application.properties]]
+2023-04-01 03:15:48.500 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-01 03:15:48.501 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating config data activation context from initial contributions
+2023-04-01 03:15:48.501 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with initial activation context
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. [ConfigDataActivationContext@4e295589 cloudPlatform = [null], profiles = [null]]
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 0 contributors
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Deducing profiles from current config data environment contributors
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with profile activation context
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase AFTER_PROFILE_ACTIVATION. [ConfigDataActivationContext@224bdf54 cloudPlatform = [null], profiles = [Profiles@7c6d814f active = '[]', default = '[default]', accepted = '[default]']]
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-01 03:15:48.502 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yaml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.xml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.properties
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yaml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.xml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.properties
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yaml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.xml
+2023-04-01 03:15:48.503 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.properties
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yaml
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yml
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.xml
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.properties
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource class path resource [application.properties] ignoring location optional:classpath:/;optional:classpath:/config/
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Applying config data environment contributions
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding imported property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting default profiles: [default]
+2023-04-01 03:15:48.504 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting active profiles: []
+2023-04-01 03:15:48.507 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.509 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.510 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.511 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.ValidationExceptionFailureAnalyzer: javax/validation/ValidationException
+2023-04-01 03:15:48.512 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.512 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer: liquibase/exception/ChangeLogParseException
+2023-04-01 03:15:48.518 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.518 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer: org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer
+2023-04-01 03:15:48.518 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.522 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.523 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-01 03:15:48.526 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.526 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.526 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.527 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.527 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.527 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.527 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.527 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.527 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.528 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.528 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-01 03:15:48.528 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.diagnostics.FailureAnalysisReporter] names: [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter]
+2023-04-01 03:15:48.528 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@23:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@24:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@23:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@24:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329)
+	... 23 common frames omitted
+2023-04-01 03:15:48.533 [Thread-0] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
+2023-04-14 19:55:10.362 [Thread-0] DEBUG o.s.b.d.r.c.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@ebf1f0
+2023-04-14 19:55:10.430 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.logging.LoggingSystemFactory] names: [org.springframework.boot.logging.logback.LogbackLoggingSystem.Factory, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.Factory, org.springframework.boot.logging.java.JavaLoggingSystem.Factory]
+2023-04-14 19:55:11.291 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[main,5,main]
+2023-04-14 19:55:11.292 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2023-04-14 19:55:11.292 [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application com.springboot.uber.UberApplication with URLs [file:/hdd/manas/Desktop/CM/coding/Projects/JAVA/IntellijProjects/Uber/target/classes/]
+2023-04-14 19:55:11.293 [restartedMain] TRACE o.s.b.env.EnvironmentPostProcessor - RandomValuePropertySource add to Environment
+2023-04-14 19:55:11.293 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentPostProcessor - Post-processing environment to add config data
+2023-04-14 19:55:11.293 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Building config data environment contributors
+2023-04-14 19:55:11.294 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'configurationProperties'
+2023-04-14 19:55:11.294 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'commandLineArgs'
+2023-04-14 19:55:11.295 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletConfigInitParams'
+2023-04-14 19:55:11.295 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'servletContextInitParams'
+2023-04-14 19:55:11.295 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemProperties'
+2023-04-14 19:55:11.295 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'systemEnvironment'
+2023-04-14 19:55:11.296 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating wrapped config data contributor for 'random'
+2023-04-14 19:55:11.296 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:file:./;optional:file:./config/;optional:file:./config/*/'
+2023-04-14 19:55:11.296 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding initial config data import from location 'optional:classpath:/;optional:classpath:/config/'
+2023-04-14 19:55:11.296 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing initial config data environment contributors without activation context
+2023-04-14 19:55:11.297 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. no activation context
+2023-04-14 19:55:11.297 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-14 19:55:11.298 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-14 19:55:11.298 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-14 19:55:11.298 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-14 19:55:11.299 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-14 19:55:11.299 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-14 19:55:11.300 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-14 19:55:11.300 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-14 19:55:11.300 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-14 19:55:11.301 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-14 19:55:11.301 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading file [.] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-14 19:55:11.302 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-14 19:55:11.303 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [file [.]]
+2023-04-14 19:55:11.304 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-14 19:55:11.304 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-14 19:55:11.304 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-14 19:55:11.305 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-14 19:55:11.305 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-14 19:55:11.306 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-14 19:55:11.307 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-14 19:55:11.307 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-14 19:55:11.308 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-14 19:55:11.308 [restartedMain] TRACE o.s.b.c.config.ConfigDataLoaders - Loading class path resource [application.properties] using loader org.springframework.boot.context.config.StandardConfigDataLoader
+2023-04-14 19:55:11.309 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Loaded resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-14 19:55:11.309 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Imported 1 resource [class path resource [application.properties]]
+2023-04-14 19:55:11.310 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-14 19:55:11.310 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Creating config data activation context from initial contributions
+2023-04-14 19:55:11.310 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with initial activation context
+2023-04-14 19:55:11.315 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase BEFORE_PROFILE_ACTIVATION. [ConfigDataActivationContext@35920d2 cloudPlatform = [null], profiles = [null]]
+2023-04-14 19:55:11.316 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 0 contributors
+2023-04-14 19:55:11.317 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Deducing profiles from current config data environment contributors
+2023-04-14 19:55:11.317 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Processing config data environment contributors with profile activation context
+2023-04-14 19:55:11.318 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports for phase AFTER_PROFILE_ACTIVATION. [ConfigDataActivationContext@5ddefb87 cloudPlatform = [null], profiles = [Profiles@68d450fa active = '[]', default = '[default]', accepted = '[default]']]
+2023-04-14 19:55:11.318 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:file:./;optional:file:./config/;optional:file:./config/*/]
+2023-04-14 19:55:11.318 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yaml
+2023-04-14 19:55:11.319 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.yml
+2023-04-14 19:55:11.319 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.xml
+2023-04-14 19:55:11.320 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application.properties
+2023-04-14 19:55:11.320 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yaml
+2023-04-14 19:55:11.320 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.yml
+2023-04-14 19:55:11.321 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.xml
+2023-04-14 19:55:11.321 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application.properties
+2023-04-14 19:55:11.321 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yaml
+2023-04-14 19:55:11.321 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.yml
+2023-04-14 19:55:11.322 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.xml
+2023-04-14 19:55:11.322 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./application-default.properties
+2023-04-14 19:55:11.322 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yaml
+2023-04-14 19:55:11.323 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.yml
+2023-04-14 19:55:11.323 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.xml
+2023-04-14 19:55:11.323 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource file:./config/application-default.properties
+2023-04-14 19:55:11.323 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-14 19:55:11.324 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-14 19:55:11.324 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource file [.] from location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-14 19:55:11.324 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource file [.] ignoring location optional:file:./;optional:file:./config/;optional:file:./config/*/
+2023-04-14 19:55:11.324 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-14 19:55:11.325 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processing imports [optional:classpath:/;optional:classpath:/config/]
+2023-04-14 19:55:11.325 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yaml
+2023-04-14 19:55:11.325 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.yml
+2023-04-14 19:55:11.325 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application.xml
+2023-04-14 19:55:11.326 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yaml
+2023-04-14 19:55:11.326 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.yml
+2023-04-14 19:55:11.326 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.xml
+2023-04-14 19:55:11.326 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application.properties
+2023-04-14 19:55:11.326 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yaml
+2023-04-14 19:55:11.327 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.yml
+2023-04-14 19:55:11.327 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.xml
+2023-04-14 19:55:11.327 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/application-default.properties
+2023-04-14 19:55:11.327 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yaml
+2023-04-14 19:55:11.328 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.yml
+2023-04-14 19:55:11.328 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.xml
+2023-04-14 19:55:11.328 [restartedMain] TRACE o.s.b.c.c.ConfigDataLocationResolver - Skipping missing resource classpath:/config/application-default.properties
+2023-04-14 19:55:11.329 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Considering resource class path resource [application.properties] from location optional:classpath:/;optional:classpath:/config/
+2023-04-14 19:55:11.329 [restartedMain] TRACE o.s.b.c.config.ConfigDataImporter - Already loaded resource class path resource [application.properties] ignoring location optional:classpath:/;optional:classpath:/config/
+2023-04-14 19:55:11.329 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Nothing imported
+2023-04-14 19:55:11.329 [restartedMain] TRACE o.s.b.c.c.ConfigDataEnvironmentContributors - Processed imports for of 2 contributors
+2023-04-14 19:55:11.330 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Applying config data environment contributions
+2023-04-14 19:55:11.330 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Adding imported property source 'Config resource 'class path resource [application.properties]' via location 'optional:classpath:/''
+2023-04-14 19:55:11.330 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting default profiles: [default]
+2023-04-14 19:55:11.331 [restartedMain] TRACE o.s.b.c.config.ConfigDataEnvironment - Setting active profiles: []
+2023-04-14 19:55:11.341 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.BeanCurrentlyInCreationFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.352 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.MutuallyExclusiveConfigurationPropertiesFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.355 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.NoUniqueBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.358 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.ValidationExceptionFailureAnalyzer: javax/validation/ValidationException
+2023-04-14 19:55:11.361 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer: Class [org.springframework.boot.diagnostics.analyzer.InvalidConfigurationPropertyValueFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.364 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.liquibase.LiquibaseChangelogMissingFailureAnalyzer: liquibase/exception/ChangeLogParseException
+2023-04-14 19:55:11.371 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer: Class [org.springframework.boot.autoconfigure.diagnostics.analyzer.NoSuchBeanDefinitionFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.372 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer: org.springframework.boot.autoconfigure.flyway.FlywayMigrationScriptMissingFailureAnalyzer
+2023-04-14 19:55:11.380 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jdbc.DataSourceBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.384 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer: Class [org.springframework.boot.autoconfigure.jooq.NoDslContextBeanFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.387 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - Skipping org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer: Class [org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryBeanCreationFailureAnalyzer] has no suitable constructor
+2023-04-14 19:55:11.410 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.411 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.412 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.414 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.415 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.416 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.417 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.418 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.419 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.421 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.422 [restartedMain] TRACE o.s.b.diagnostics.FailureAnalyzers - FailureAnalyzer null failed
+java.lang.NullPointerException: Cannot invoke "org.springframework.boot.diagnostics.FailureAnalyzer.analyze(java.lang.Throwable)" because "analyzer" is null
+	at org.springframework.boot.diagnostics.FailureAnalyzers.analyze(FailureAnalyzers.java:126)
+	at org.springframework.boot.diagnostics.FailureAnalyzers.reportException(FailureAnalyzers.java:119)
+	at org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:811)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:785)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-04-14 19:55:11.424 [restartedMain] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.boot.diagnostics.FailureAnalysisReporter] names: [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter]
+2023-04-14 19:55:11.425 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@23:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@24:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.springboot.uber.UberApplication.main(UberApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@11:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@12:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@23:76 - no applicable action for [color], current ElementPath  is [[configuration][appender][color]]
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@24:13 - no applicable action for [pattern], current ElementPath  is [[configuration][appender][color][pattern]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reinitialize(LogbackLoggingSystem.java:232)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329)
+	... 23 common frames omitted
+2023-04-14 19:55:11.446 [Thread-0] TRACE o.s.c.i.s.SpringFactoriesLoader - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
