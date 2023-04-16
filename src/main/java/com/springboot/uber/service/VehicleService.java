@@ -29,9 +29,8 @@ public class VehicleService {
 		// Get unassigned vehicle IDs
 		List<Long> unassignedVehicleIds = allVehicleIds.stream().filter(id -> {
 			Long id2 = id;
-			return !activeVehicleIds.contains(id2);
-		})
-				.collect(Collectors.toList());
+			return !activeVehicleIds.contains(id2.intValue());
+		}).collect(Collectors.toList());
 
 		// Get unassigned vehicle objects
 		List<Vehicle> unassignedVehicles = vehicleRepository.findAllById(unassignedVehicleIds);

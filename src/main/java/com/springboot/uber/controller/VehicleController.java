@@ -29,6 +29,7 @@ public class VehicleController {
 
 	@Autowired
 	private VehicleRepository vehicleRepository;
+	@Autowired
 	private VehicleService vehicleService;
 
 //	OLAP Query 1
