@@ -6,16 +6,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
 import org.springframework.lang.NonNull;
 
 @Entity
-@Table(name = "ride", uniqueConstraints = { @UniqueConstraint(columnNames = { "vehicle_id", "driver_id" }) })
+//@Table(name = "ride", uniqueConstraints = { @UniqueConstraint(columnNames = { "vehicle_id", "driver_id" }) })
 public class Ride {
 
 	@Id
@@ -35,12 +33,12 @@ public class Ride {
 	private int distance;
 
 	@NonNull
-	@OneToOne(cascade = CascadeType.MERGE)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "vehicle_id", referencedColumnName = "id")
 	private Vehicle vehicle;
 
 	@NonNull
-	@OneToOne(cascade = CascadeType.MERGE)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "driver_id", referencedColumnName = "id")
 	private Driver driver;
 

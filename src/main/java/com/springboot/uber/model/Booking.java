@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -23,7 +23,7 @@ public class Booking {
 	private String startTime;
 	private String endTime;
 
-	@OneToOne(cascade = CascadeType.MERGE)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "ride_id", referencedColumnName = "id")
 	private Ride ride;
 
@@ -84,6 +84,12 @@ public class Booking {
 
 	public void setRide(Ride ride) {
 		this.ride = ride;
+	}
+
+	@Override
+	public String toString() {
+		return "Booking [id=" + id + ", status=" + status + ", bookingTime=" + bookingTime + ", startTime=" + startTime
+				+ ", endTime=" + endTime + ", ride=" + ride + "]";
 	}
 
 }
